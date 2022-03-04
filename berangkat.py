@@ -42,33 +42,7 @@ def depart_all():
 
     print("finish depart all")
 
-def get_marketing():
-    print("do marketing")
-    click_xpath ('/html/body/div[7]/div/div[3]/div[5]')
-    click_xpath ('//*[@id="popBtn2"]')
-    click_xpath ('//*[@id="newCampaign"]')
-    # airlines marketing:
 
-    click_xpath ('//*[@id="campaign-1"]/table/tbody/tr[1]')
-    time.sleep(1)
-    v_options = Select(browser.find_element_by_xpath('//*[@id="dSelector"]'))
-    v_options.select_by_value('1')
-
-    time.sleep (2.1)
-    click_xpath ('//*[@id="c4Btn"]')
-
-    print('done marketing pax')
-
-    # select on cargo
-    click_xpath ('//*[@id="newCampaign"]')
-    click_xpath ('//*[@id="campaign-1"]/table/tbody/tr[2]')
-    time.sleep(1)
-    v_options = Select(browser.find_element_by_xpath('//*[@id="dSelector"]'))
-    v_options.select_by_value('1')
-    time.sleep (2.1)
-    click_xpath ('//*[@id="c4Btn"]')
-
-    print('done marketing cargo')
 
 
 def full_tank():
@@ -166,8 +140,6 @@ if __name__ == '__main__':
     browser.find_element_by_xpath ('//*[@id="flightStatusInflight"]')
 
     browser.implicitly_wait(2)
-
-    # get_marketing()
 
     fill_tanks_and_depart_all()
     
