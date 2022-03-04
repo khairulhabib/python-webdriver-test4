@@ -40,6 +40,7 @@ def get_marketing():
 
     # airlines marketing:
     click_xpath ('//*[@id="popBtn2"]')
+    pax_new_campaign=WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="newCampaign"]')))
     click_xpath ('//*[@id="newCampaign"]')
     click_xpath ('//*[@id="campaign-1"]/table/tbody/tr[1]/td[2]')
 
@@ -52,6 +53,7 @@ def get_marketing():
 
     # select on cargo
     click_xpath ('//*[@id="popBtn2"]')
+    cargo_new_campaign=WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@id="newCampaign"]')))
     click_xpath ('//*[@id="newCampaign"]')
     click_xpath ('//*[@id="campaign-1"]/table/tbody/tr[2]/td[2]')
     time.sleep (2.9)
